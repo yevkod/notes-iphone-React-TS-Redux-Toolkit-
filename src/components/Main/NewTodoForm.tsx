@@ -8,16 +8,14 @@ interface NewTodoFormProps {
 
 export const NewTodoForm: React.FC<NewTodoFormProps> = ({value, updateText, handleAction}) => {
     return (
-        <div>
-            <label>
-                <input
-                placeholder='new todo'
-                value={value}
-                onChange={(e) => updateText(e.target.value)}
-                />
-                <button onClick={handleAction}>Add todo</button>
-            </label>
-        </div>
+        <label>
+            <input
+            placeholder='new todo'
+            value={value}
+            onChange={(e) => updateText(e.target.value)}
+            />
+            <button onClick={handleAction}>Add todo</button>
+        </label>
     );
 };
 

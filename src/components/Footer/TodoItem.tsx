@@ -1,5 +1,5 @@
-import React from "react";
-import {useDispatch} from "react-redux";
+import React from 'react';
+import {useAppDispatch} from "../../hooks";
 import {removeTodo, toggleComplete} from "../../store/todoSlice";
 
 interface TodoItemProps {
@@ -9,7 +9,8 @@ interface TodoItemProps {
 }
 
 export const TodoItem: React.FC<TodoItemProps> = ({id, title, completed}) => {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
+
     return (
         <li>
             <input
@@ -20,5 +21,6 @@ export const TodoItem: React.FC<TodoItemProps> = ({id, title, completed}) => {
             <span>{title}</span>
             <span onClick={() => dispatch(removeTodo(id))}>&times;</span>
         </li>
-    )
-}
+    );
+};
+

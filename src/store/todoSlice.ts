@@ -3,7 +3,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 type Todo = {
     id: string,
     title: string,
-    completed: boolean,
+    completed: boolean
 }
 
 type TodosState = {
@@ -37,6 +37,6 @@ const todoSlice = createSlice({
     },
 });
 
-
-export const {addTodo, toggleComplete, removeTodo} = notesSlice.actions;
+export const {addTodo, toggleComplete, removeTodo} = todoSlice.actions;
 export default todoSlice.reducer;
+
